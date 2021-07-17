@@ -1,0 +1,13 @@
+{
+  "name": "twilio-payment-simulator-generic-pay-nodejs",
+  "version": "1.0.0",
+  "description": "Payment simulator for Twilio generic pay connector written in NodeJS",
+  "main": "pay-sim-simple.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon pay-sim-simple",
+    "startrobust": "nodemon pay-sim-robust"
+  },
+  "author": "Patrick Hundal",
+  "license": "MIT"
+}
