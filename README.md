@@ -1,6 +1,6 @@
 # Twilio Payment Processing Simulator for Generic Pay connector
 
-A simulator for testing Twilio Generic Pay Connectors
+A NodeJS simulator for testing Twilio Generic Pay Connectors
 
 
 ## Prerequisites
@@ -11,18 +11,6 @@ A simulator for testing Twilio Generic Pay Connectors
 1. A Twilio IVR using the [pay verb](https://www.twilio.com/docs/voice/twiml/pay) or the [pay widget in Studio](https://www.twilio.com/docs/studio/widget-library/capture-payments)
 
 ## Getting Started:
-
-### Install Ngrok
-To be able to have your Twilio <pay> verb reach out to this connector, it will need to be available on the web.  You can use a package like Ngrok to be able to accomplish this: [Download and install Ngrok](https://ngrok.com/download)
-
-- Startup Ngrok (default port is 8081)
-```
-% ngrok http 8081
-```
-
-- When Ngrok starts, capture the URL represented bye the HTTPS port that is setup (highlighted in blue below).  We'll use this in configuring the pay connector later.
-![Sweet configuration image on Github](https://github.com/phundal-twilio/twilio-payment-simulator-generic-pay-nodejs/blob/main/Ngrok-sample.png?raw=true)
-
 
 ## Configure simulator
 
@@ -45,10 +33,36 @@ var server = app.listen(8081, function () {
   ...
 ```
 
+
+## Setup and configure Ngrok
+To be able to have your Twilio pay verb/widget reach out to this connector, it will need to be available on the web.  
+
+- Download and install Ngrork:
+```
+https://ngrok.com/download
+```
+
+- Startup Ngrok (default port is 8081)
+```
+% ngrok http 8081
+```
+
+- When Ngrok starts, capture the URL represented bye the HTTPS port that is setup (highlighted in blue below).  We'll use this in configuring the pay connector later.
+![Sweet configuration image on Github](https://github.com/phundal-twilio/twilio-payment-simulator-generic-pay-python/blob/main/Ngrok-sample.png?raw=true)
+
+
+
 ## Configure Pay Connector Add-on
 
 - Setup your pay connector with the appropriate `Username/Password` (as defined earlier in your .js file).  Set the `ENDPOINT URL` to the the URL captured from Ngrok
 ![Sweet configuration image on Github](https://github.com/phundal-twilio/twilio-payment-simulator-generic-pay-nodejs/blob/main/Connector-configure.png?raw=true)
+
+
+## Configure your IVR to use a pay verb or Connector
+The scope of this is beyond this writeup, but you can find details on the Twilio pay connector here:
+
+- [Twilio pay verb](https://www.twilio.com/docs/voice/twiml/pay)
+- [Twilio pay widget in Studio](https://www.twilio.com/docs/studio/widget-library/capture-payments)
 
 ## Start the simulator
 
@@ -63,12 +77,6 @@ To startup a more robust payment simulator that includes validation:
 ```
 % node pay-sim-robust.js
 ```
-## Configure your IVR to use a pay verb or Connector
-The scope of this is beyond this writeup, but you can find details on the Twilio pay connector here:
-
-- [Twilio pay verb](https://www.twilio.com/docs/voice/twiml/pay)
-- [Twilio pay widget in Studio](https://www.twilio.com/docs/studio/widget-library/capture-payments)
-
 
 ## Tips and Troubleshooting
 
