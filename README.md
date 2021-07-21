@@ -37,10 +37,7 @@ var server = app.listen(8081, function () {
 ## Setup and configure Ngrok
 To be able to have your Twilio pay verb/widget reach out to this connector, it will need to be available on the web.  
 
-- Download and install Ngrork:
-```
-https://ngrok.com/download
-```
+- Download and install Ngrork: https://ngrok.com/download
 
 - Startup Ngrok (default port is 8081)
 ```
