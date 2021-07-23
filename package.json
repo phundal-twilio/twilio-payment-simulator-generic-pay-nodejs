@@ -9,5 +9,19 @@
     "startrobust": "nodemon pay-sim-robust"
   },
   "author": "Patrick Hundal",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phundal-twilio/twilio-payment-simulator-generic-pay-nodejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/phundal-twilio/twilio-payment-simulator-generic-pay-nodejs/issues"
+  },
+  "homepage": "https://github.com/phundal-twilio/twilio-payment-simulator-generic-pay-nodejs#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-basic-auth": "^1.2.0",
+    "uuid": "^8.3.2"
+  }
 }
